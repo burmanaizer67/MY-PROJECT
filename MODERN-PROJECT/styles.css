@@ -1,0 +1,256 @@
+:root {
+  --bg-cream: #f8f5ef;
+  --bg-sand: #eadfce;
+  --ink: #18212e;
+  --muted: #526072;
+  --card: #fffdf9;
+  --line: #d7c8b4;
+  --accent: #d4572d;
+  --accent-strong: #ac3d19;
+  --teal: #0e8a84;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Sora", "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 15% -10%, #f3c7a6 0%, transparent 35%),
+    radial-gradient(circle at 90% 10%, #c6e8df 0%, transparent 30%),
+    linear-gradient(165deg, var(--bg-cream), var(--bg-sand));
+  line-height: 1.6;
+}
+
+.page-wrap {
+  width: min(1040px, 92%);
+  margin: 28px auto 42px;
+  background: color-mix(in srgb, var(--card) 88%, white 12%);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 22px 60px rgba(42, 34, 25, 0.14);
+  overflow: hidden;
+}
+
+.site-header {
+  padding: 24px 26px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  background: #fff7ef;
+  border: 1px solid var(--line);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  transition: transform 0.22s ease, background-color 0.22s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  background: #ffe1c8;
+  transform: translateY(-2px);
+}
+
+.hero {
+  padding: 56px 26px 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.kicker {
+  margin: 0;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 5.3vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+}
+
+.lead {
+  max-width: 64ch;
+  color: var(--muted);
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 11px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-secondary {
+  color: var(--ink);
+  border-color: var(--line);
+  background: #fff;
+}
+
+.content {
+  padding: 6px 26px 30px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  background: #fff;
+  animation: rise-in 0.6s ease both;
+}
+
+.card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.panel {
+  padding: 28px 26px 34px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+  max-width: 560px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #cbbca8;
+  border-radius: 10px;
+  padding: 11px 12px;
+  font: inherit;
+  background: #fffcf7;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+button {
+  width: fit-content;
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 15px;
+  background: var(--teal);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 16px 26px 22px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding-top: 36px;
+  }
+}
