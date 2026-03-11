@@ -5,333 +5,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Website</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --bg-top: #f7f3e9;
-            --bg-bottom: #d8e7f2;
-            --ink: #1d2433;
-            --muted: #4a566f;
-            --accent: #e4603a;
-            --accent-deep: #b84322;
-            --card: #ffffffcc;
-            --line: #cfd8e6;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            color: var(--ink);
-            font-family: "Space Grotesk", "Avenir Next", sans-serif;
-            background: linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
-            min-height: 100vh;
-            line-height: 1.55;
-            padding: 24px;
-        }
-
-        .page {
-            max-width: 950px;
-            margin: 0 auto;
-            background: var(--card);
-            border: 1px solid var(--line);
-            border-radius: 20px;
-            padding: 28px;
-            box-shadow: 0 20px 60px rgba(20, 35, 60, 0.12);
-            animation: fade-slide-in 0.6s ease;
-        }
-
         .hello-text {
-            margin: 0;
-            color: var(--accent-deep);
-            font-size: 1.05rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        h1,
-        h2,
-        h3 {
-            margin: 0 0 10px;
-            font-family: "Libre Baskerville", Georgia, serif;
-            line-height: 1.2;
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
         }
 
         h1 {
-            color: #22304a;
-            font-size: clamp(2rem, 4vw, 2.6rem);
+            color: red;
+            font-size: 36px;
         }
 
         h2 {
-            color: #2a4f8a;
-            font-size: clamp(1.45rem, 3vw, 2rem);
+            color: green;
+            font-size: 30px;
         }
 
         h3 {
-            color: #3d476f;
-            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            color: purple;
+            font-size: 24px;
         }
 
         p {
-            color: var(--ink);
-            font-size: 1rem;
-            margin: 0 0 14px;
+            color: black;
+            font-size: 16px;
         }
 
         a {
-            color: var(--accent);
-            text-decoration-thickness: 2px;
-            text-underline-offset: 2px;
-        }
-
-        a:hover {
-            color: var(--accent-deep);
-        }
-
-        .link-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px 26px;
-            margin: 18px 0 22px;
-        }
-
-        .content-grid {
-            display: grid;
-            gap: 16px;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            margin-bottom: 24px;
-        }
-
-        .card {
-            background: #fff;
-            border: 1px solid var(--line);
-            border-radius: 14px;
-            padding: 16px;
-        }
-
-        ul,
-        ol {
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 6px;
-        }
-
-        img,
-        video {
-            width: 100%;
-            max-width: 420px;
-            height: auto;
-            display: block;
-            border-radius: 12px;
-            border: 1px solid var(--line);
-            margin-bottom: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 14px 0 24px;
-            background: #fff;
-            border: 1px solid var(--line);
-        }
-
-        th,
-        td {
-            border: 1px solid var(--line);
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background: #eaf1fb;
-        }
-
-        form {
-            border: 1px solid var(--line);
-            border-radius: 14px;
-            background: #fff;
-            padding: 16px;
-            max-width: 500px;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            max-width: 100%;
-            padding: 10px 12px;
-            border: 1px solid #bcc9dd;
-            border-radius: 8px;
-            font: inherit;
-            margin-top: 6px;
-        }
-
-        input[type="checkbox"] {
-            width: auto;
-            margin-left: 8px;
-            transform: translateY(1px);
-        }
-
-        input[type="submit"] {
-            width: auto;
-            border: 0;
-            background: var(--accent);
-            color: #fff;
-            font-weight: 700;
-            cursor: pointer;
-            padding: 10px 16px;
-        }
-
-        input[type="submit"]:hover {
-            background: var(--accent-deep);
-        }
-
-        .checkbox-row {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        @keyframes fade-slide-in {
-            from {
-                opacity: 0;
-                transform: translateY(12px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 640px) {
-            body {
-                padding: 14px;
-            }
-
-            .page {
-                padding: 18px;
-                border-radius: 14px;
-            }
+            color: orange;
+            text-decoration: none;
         }
     </style>
 </head>
-
 <body>
-    <main class="page">
-        <header>
-            <p class="hello-text">
-                Hello, world!
-            </p>
-            <h1>The biggest title</h1>
-            <h2>The second biggest</h2>
-            <h3>The third biggest</h3>
-        </header>
-
-        <section class="link-group">
-            <p>
-                <a href="about.html">
-                    This link is to another page on this website
-                </a>
-            </p>
-            <p>
-                <a href="https://billingehus.com/">
-                    This is a link to another website entirely
-                </a>
-            </p>
-        </section>
-
-        <section class="content-grid">
-            <div class="card">
-                <ul>
-                    <li>First item</li>
-                    <li>Second item</li>
-                    <li>Third item</li>
-                    <li>Fourth item</li>
-                    <li>Fifth item</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <ol>
-                    <li>First item</li>
-                    <li>Second item</li>
-                    <li>Third item</li>
-                    <li>Fourth item</li>
-                    <li>Fifth item</li>
-                </ol>
-            </div>
-        </section>
-
-        <img src="Kod.jpeg" width="300px" alt="">
-
+    <header>
+        <p class="hello-text">
+            Hello, world!
+        </p>
+        <h1>The biggest title</h1>
+        <h2>The second biggest</h2>
+        <h3>The third biggest</h3>
         <p>
-            Hello, world! It's good to see you. This is a paragraph with some <strong>bold text</strong> and some <em>italic text</em>.
-            You can also include <a href="https://www.example.com">links</a>
-            to other websites or pages.
+            <a href="about.html">
+                This link is to another page on this website
+            </a>
+        </p>
+        <p>
+            <a href="https://billingehus.com/">
+                This is a link to another website entirely
+            </a>
+        </p>
+    </header>
+
+<div>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+        <li>Fifth item</li>
+    </ul>
+</div>
+
+<div>
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+        <li>Fifth item</li>
+    </ol>
+</div>
+
+<div>
+    <img src="Kod.jpeg" width="300px" alt="">
+</div>
+
+<div>
+    <p>
+        Hello, world! It's good to see you. This is a paragraph with some <strong>bold text</strong> and some <em>italic text</em>.
+        You can also include <a href="https://www.example.com">links</a>
+        to other websites or pages.
+    </p>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 3, Cell 1</td>
+            <td>Row 3, Cell 2</td>
+            <td>Row 3, Cell 3</td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay="true" controls="true" width="320" height="240">
+        Your browser does not support the video tag.
+
+    </video>
+</div>
+
+<footer>
+    <form action="">
+        <p>
+            <label for="name">Name:</label><br>
+            <input type="text" placeholder="John Doe" id="name" name="name" required><br>
+        </p>
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" placeholder="examle@gmail.com" id="email" name="email" required><br>
+        </p>
+        <p>
+            <label for="message">Message:</label><br>
+            <textarea id="message" placeholder="Blablabla" name="message" rows="4" required></textarea><br>
         </p>
 
-        <table>
-            <tr>
-                <th>Header 1</th>
-                <th>Header 2</th>
-                <th>Header 3</th>
-            </tr>
-            <tr>
-                <td>Row 1, Cell 1</td>
-                <td>Row 1, Cell 2</td>
-                <td>Row 1, Cell 3</td>
-            </tr>
-            <tr>
-                <td>Row 2, Cell 1</td>
-                <td>Row 2, Cell 2</td>
-                <td>Row 2, Cell 3</td>
-            </tr>
-            <tr>
-                <td>Row 3, Cell 1</td>
-                <td>Row 3, Cell 2</td>
-                <td>Row 3, Cell 3</td>
-            </tr>
-        </table>
+        <p>
+            Do you want to receive updates?
+            <input type="checkbox">
+        </p>
 
-        <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay="true" controls="true" width="320" height="240">
-            Your browser does not support the video tag.
-        </video>
-
-        <footer>
-            <form action="">
-                <p>
-                    <label for="name">Name:</label><br>
-                    <input type="text" placeholder="John Doe" id="name" name="name" required><br>
-                </p>
-                <p>
-                    <label for="email">Email:</label><br>
-                    <input type="email" placeholder="examle@gmail.com" id="email" name="email" required><br>
-                </p>
-                <p>
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" placeholder="Blablabla" name="message" rows="4" required></textarea><br>
-                </p>
-
-                <p class="checkbox-row">
-                    Do you want to receive updates?
-                    <input type="checkbox">
-                </p>
-
-                <p>
-                    <input type="submit" value="Submit">
-                </p>
-            </form>
-        </footer>
-    </main>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+</footer>
 
 </body>
 </html>
